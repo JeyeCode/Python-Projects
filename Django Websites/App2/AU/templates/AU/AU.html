@@ -1,0 +1,739 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Abou Us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
+
+  <style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: "Lato", sans-serif;
+    }
+
+    body,
+    html {
+      height: 100%;
+      color: #777;
+      line-height: 1.8;
+    }
+
+    /* Create a Parallax Effect */
+    .bgimg-1,
+    .bgimg-2,
+    .bgimg-3 {
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    /* First image (Logo. Full height) */
+    .bgimg-1 {
+      background-image: url('static/images/e1.jpg');
+      min-height: 10%;
+    }
+
+    /* Second image (Portfolio) */
+    .bgimg-2 {
+      background-image: url("static/images/e2.jpg");
+      min-height: 400px;
+    }
+
+    /* Third image (Contact) */
+    .bgimg-3 {
+      background-image: url("static/images/e3.jpg");
+      min-height: 400px;
+    }
+
+    .w3-wide {
+      letter-spacing: 10px;
+    }
+
+    .w3-hover-opacity {
+      cursor: pointer;
+    }
+
+    /* Turn off parallax scrolling for tablets and phones */
+    @media only screen and (max-device-width: 1600px) {
+
+      .bgimg-1,
+      .bgimg-2,
+      .bgimg-3 {
+        background-attachment: scroll;
+        min-height: 400px;
+      }
+    }
+  </style>
+</head>
+  <!-- Navbar (sit on top) -->
+<header>
+  <img class="ukiyo image-1" src="{% static 'images/cpu.jpg'%}" data-u-willchange decoding="async" />
+  <div class="banner">
+
+
+    <aside class="sidebar">
+      <button class="toggle" type="button" onclick="toggleOpen()">
+        <span class="material-symbols-outlined">chevron_right</span>
+      </button>
+
+      <div class="header">
+        <img src="{% static 'images/logo.svg'%}" class="logo" />
+      </div>
+
+
+
+      <div class="search">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" placeholder="Search" />
+      </div>
+      <nav class="menu">
+        <a href="http://127.0.0.1:8000/" style="text-decoration: none; color: inherit;">
+          <button type="button" class="menu-item">
+            <span class="material-symbols-outlined">home</span>
+            <p class="menu-text">Home</p>
+          </button>
+        </a>
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <button type="button" class="menu-item">
+            <span class="material-symbols-outlined">location_on</span>
+            <p class="menu-text">Location</p>
+          </button>
+        </a>
+        <a href="#" style="text-decoration: none; color: inherit;">
+          <button type="button" class="menu-item">
+            <span class="material-symbols-outlined">call</span>
+            <p class="menu-text">Contact</p>
+          </button>
+        </a>
+    </aside>
+</header>
+      <script src="https://cdn.jsdelivr.net/npm/ukiyojs@4.2.0/dist/ukiyo.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+   
+      <!-- Container (About Section) -->
+      <div class="w3-content w3-container w3-padding-32" id="about">
+        <h3 class="w3-center">ABOUT ME</h3>
+        <p class="w3-center"><em>I love Django COder</em></p>
+        <p>I am a passionate and detail-oriented Django Developer with a strong foundation in building robust, scalable,
+          and efficient web applications. My expertise lies in leveraging the power of Python and the Django framework
+          to create solutions that solve real-world problems while ensuring clean, maintainable, and high-performance
+          code.
+
+          With [X years] of experience in software development, I specialize in designing and implementing full-stack
+          applications, from backend logic and database management to frontend integration and API development. I have
+          hands-on experience working with relational databases like PostgreSQL and MySQL, as well as non-relational
+          databases such as MongoDB. Additionally, I’m proficient in integrating third-party services, authentication
+          systems (e.g., OAuth2, JWT), and payment gateways to enhance application functionality.
+
+          Beyond technical skills,
+
+        <div class="w3-row">
+          <div class="w3-col m6 w3-center w3-padding-large">
+            <p><b><i class="fa fa-user w3-margin-right"></i>JeyCode</b></p><br>
+            <img src="{% static 'images/logo1.jpg'%}" class="w3-round w3-image w3-opacity w3-hover-opacity-off"
+              alt="Photo of Me" width="500" height="333">
+          </div>
+
+          <!-- Hide this text on small devices -->
+          <div class="w3-col m6 w3-hide-small w3-padding-large">
+            <p> I thrive in collaborative environments, actively contributing to agile teams to deliver projects on time
+              and within scope. I am committed to staying up-to-date with the latest industry trends and best practices
+              in web development, continuously improving my skills through learning and experimentation. When I’m not
+              coding, you can find me exploring new technologies, participating in open-source projects, or mentoring
+              aspiring developers. My goal is to combine creativity and technology to build intuitive, user-friendly
+              applications that make a meaningful impact.
+            </p>
+          </div>
+        </div>
+        <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+        <p class="w3-wide"><i class="fa fa-camera"></i>Python</p>
+        <div class="w3-light-grey">
+          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-laptop"></i>Web Design</p>
+        <div class="w3-light-grey">
+          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:85%">85%</div>
+        </div>
+        <p class="w3-wide"><i class="fa fa-photo"></i>AI</p>
+        <div class="w3-light-grey">
+          <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+        </div>
+      </div>
+
+
+      <footer>
+        <img class="ukiyo image-3" src="{% static 'images/55.jpg'%}" />
+        <div class="footer">
+          <div>
+            <h2>Projects</h2>
+            <ul>
+              <li>Todo app</li>
+              <li>Calculator</li>
+              <li>Instagram Clone</li>
+              <li>Parallax Website</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+
+      <script>
+        // Modal Image Gallery
+        function onClick(element) {
+          document.getElementById("img01").src = element.src;
+          document.getElementById("modal01").style.display = "block";
+          var captionText = document.getElementById("caption");
+          captionText.innerHTML = element.alt;
+        }
+
+        // Change style of navbar on scroll
+        window.onscroll = function () { myFunction() };
+        function myFunction() {
+          var navbar = document.getElementById("myNavbar");
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+          } else {
+            navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+          }
+        }
+
+        // Used to toggle the menu on small screens when clicking on the menu button
+        function toggleFunction() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+      </script>
+
+
+
+</html>
+
+<script>
+
+
+  const els = document.querySelectorAll(".ukiyo");
+  els.forEach((el) => {
+    const parallax = new Ukiyo(el);
+  });
+
+  // smooth scroll
+  const lenis = new Lenis();
+
+  function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+  }
+
+  requestAnimationFrame(raf);
+
+  const sidebar = document.querySelector(".sidebar");
+
+  const toggleOpen = () => sidebar.classList.toggle("open");
+
+  const nav = document.querySelector(".sidebar nav");
+
+  const buttons = document.querySelectorAll(".sidebar nav button");
+
+  buttons[0].classList.add("active");
+
+  buttons.forEach((button, index) =>
+    button.addEventListener("click", () => {
+      buttons.forEach((b) => b.classList.remove("active"));
+      button.classList.add("active");
+      nav.style.setProperty("--top", `${index === 0 ? 0 : index * 56}px`);
+    })
+  );
+</script>
+
+<style>
+  body {
+    color: #fff;
+    background-color: #010101;
+    font-family: "Euclid Circular A", "Poppins", sans-serif;
+    width: 100%;
+    margin: 0;
+
+  }
+
+  header {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .banner {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 15%;
+    background: linear-gradient(rgba(252, 249, 249, 0), rgb(0 0 0 / 100%) 75%);
+  }
+
+  footer {
+    position: relative;
+    display: flex;
+  }
+
+  .footer {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 100px 15% 0;
+    background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 100%) 80%);
+  }
+
+  ul {
+    margin: 40px 0 0;
+    padding-left: 20px;
+  }
+
+  ul li {
+    height: 40px;
+    opacity: 0.5;
+  }
+
+  h2 {
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0;
+  }
+
+  h3 {
+    font-weight: 400;
+    font-size: 24px;
+    opacity: 0.5;
+    margin: 4px 0;
+  }
+
+  p {
+    margin: 10px 0 0;
+    opacity: 0.5;
+    line-height: 1.45;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .row {
+    display: flex;
+    /* Use Flexbox for layout */
+    align-items: center;
+    /* Vertically center items */
+    justify-content: space-between;
+    /* Space between image and text */
+    gap: 40px;
+    /* Add spacing between image and text */
+    max-width: 1200px;
+    /* Limit the width of the container */
+    margin: 40px auto;
+    /* Center the container horizontally */
+    padding: 20px;
+    background-color: #000000;
+    /* White background for the section */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    border-radius: 8px;
+    /* Rounded corners */
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .row {
+      flex-direction: column;
+      /* Stack image and text vertically on smaller screens */
+      text-align: center;
+      /* Center-align text */
+    }
+
+    .ukiyo.image-2 {
+      width: 50%;
+      /* Make the image full-width */
+      margin-bottom: 20px;
+      /* Add space below the image */
+    }
+
+    .about {
+      width: 100%;
+      /* Make the text full-width */
+    }
+  }
+
+  .about {
+    margin-top: -100px;
+    max-width: 300px;
+  }
+
+  .about h2 {
+    font-size: 50px;
+  }
+
+  .ukiyo {
+    margin-top: 200px;
+  }
+
+  .image-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin-top: 0 !important;
+  }
+
+  .image-2 {
+    margin-top: -100px !important;
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .image-3 {
+    width: 100%;
+    height: 75vh;
+  }
+
+  /* تنظیم پیش‌فرض برای عکس و متن */
+  .row img.ukiyo.image-2 {
+    width: 50%;
+    /* عکس‌ها نصف عرض ردیف */
+    height: 20%;
+    object-fit: cover;
+    /* برای تنظیم اندازه عکس */
+  }
+
+  .row .about {
+    max-width: 500%;
+    /* متن نصف عرض ردیف */
+  }
+
+  /* تعیین جهت برای ردیف‌های زوج و فرد */
+  .row:nth-child(odd) {
+    flex-direction: row;
+    /* ردیف‌های فرد: عکس سمت چپ */
+  }
+
+  .row:nth-child(even) {
+    flex-direction: row-reverse;
+    /* ردیف‌های زوج: عکس سمت راست */
+  }
+</style>
+
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .sidebar {
+    --width-open: 230px;
+    --width-closed: 64px;
+  }
+
+  .sidebar button {
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .sidebar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    bottom: 30px;
+    width: var(--width-closed);
+    border-radius: 16px;
+    background: #000000;
+    transition: width 0.4s;
+  }
+
+  .sidebar.open {
+    width: var(--width-open);
+  }
+
+  button.toggle {
+    position: absolute;
+    z-index: 2;
+    top: 24px;
+    right: -12px;
+    display: grid;
+    place-items: center;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #2f2b43;
+    color: #8f8d9b;
+    box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+    transition: 0.3s;
+  }
+
+  .toggle:hover {
+    color: #f9f9f9;
+  }
+
+  .sidebar.open .toggle {
+    rotate: 180deg;
+  }
+
+  .sidebar .search {
+    position: relative;
+    padding: 16px 0;
+    margin: 0 10px 0;
+    width: calc(var(--width-closed) - 20px);
+    transition: 0.3s;
+  }
+
+  .sidebar.open .search {
+    width: calc(var(--width-open) - 20px);
+  }
+
+  .sidebar .search span {
+    position: absolute;
+    top: 26px;
+    left: 12px;
+    color: #68687a;
+  }
+
+  .sidebar .search input {
+    background: #2f2b43;
+    border: 0;
+    border-radius: 8px;
+    font-family: inherit;
+    width: 100%;
+    height: 44px;
+    font-size: 17px;
+    padding-left: 30px;
+    transition: 0.3s;
+  }
+
+  .sidebar .search input::placeholder {
+    color: rgb(255 255 255 / 0%);
+  }
+
+  .sidebar.open .search input::placeholder {
+    color: #68687a;
+  }
+
+  .sidebar.open .search input {
+    padding-left: 52px;
+  }
+
+  .sidebar .inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 260px;
+  }
+
+  .sidebar .header {
+    display: flex;
+    align-items: center;
+    height: 72px;
+    width: var(--width-closed);
+    padding: 0 20px;
+    background: rgb(0 0 0 / 15%);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    transition: 0.3s;
+  }
+
+  .sidebar.open .header {
+    width: var(--width-open);
+  }
+
+  .sidebar .header h1 {
+    margin-left: 12px;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 2px;
+    color: #f9f9f9;
+  }
+
+  .sidebar .logo {
+    height: 28px;
+  }
+
+  .sidebar .menu {
+    position: relative;
+    display: grid;
+  }
+
+  .sidebar .menu::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 4px;
+    height: 56px;
+    width: 4px;
+    background: #656aff;
+    translate: 0 var(--top);
+    transition: 0.3s;
+  }
+
+  .sidebar .menu button {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    height: 56px;
+    width: var(--width-closed);
+    font-size: 17px;
+    text-transform: capitalize;
+    line-height: 1;
+    padding: 0 22px;
+    color: inherit;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: 0.3s;
+  }
+
+  .sidebar.open .menu button {
+    width: var(--width-open);
+  }
+
+  .sidebar .menu :is(button:hover, .active) {
+    color: rgb(255 255 255 / 100%);
+    opacity: 1;
+  }
+
+  .sidebar.open .menu .active {
+    cursor: default;
+  }
+
+  .sidebar .menu button:hover>span {
+    opacity: 1;
+  }
+
+  .sidebar .menu button p,
+  .sidebar .header h1 {
+    opacity: 0;
+  }
+
+  .sidebar.open :is(.sidebar .menu button p, .sidebar .header h1) {
+    opacity: 1;
+  }
+
+  .sidebar.open .logo {
+    scale: 1;
+  }
+
+  .sidebar .menu button>img {
+    width: 24px;
+    height: 24px;
+  }
+</style>
+
+
+<style>
+  /* General sidebar styling */
+
+
+  /* Menu item styling */
+  .menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between icon and text */
+    padding: 10px 15px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%;
+    text-align: left;
+  }
+
+  .menu-item:hover {
+    background-color: #666c96;
+    /* Lighter background on hover */
+    transform: translateX(5px);
+    /* Slight movement on hover */
+  }
+
+  /* Menu text styling */
+  .menu-text {
+    margin: 5;
+    font-size: 1rem;
+    opacity: 0;
+    /* Initially hidden */
+    transition: opacity 0.3s ease, color 0.3s ease;
+  }
+
+  .menu-item:hover .menu-text {
+    opacity: 1;
+    /* Show text on hover */
+    color: #f7f7f7;
+    /* Highlighted text color */
+  }
+
+  /* Icon styling */
+  .material-symbols-outlined {
+    font-size: 1.5rem;
+    color: #888;
+    transition: color 0.3s ease;
+  }
+
+  .menu-item:hover .material-symbols-outlined {
+    color: #f7f7f7;
+    /* Highlighted icon color */
+  }
+
+  /* Search bar styling */
+
+  .search input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 5px;
+    width: 100%;
+  }
+
+  /* Header styling */
+  .header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #f7f7f7;
+  }
+</style>

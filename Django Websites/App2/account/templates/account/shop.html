@@ -1,0 +1,628 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Abou Us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,1,0">
+
+
+</head>
+<!-- Navbar (sit on top) -->
+<header>
+    <img class="ukiyo image-1" src="{% static 'images/box2.png'%}" data-u-willchange decoding="async" />
+
+
+
+    <div class="banner">
+
+
+
+        </body>
+
+
+        <aside class="sidebar">
+            <button class="toggle" type="button" onclick="toggleOpen()">
+                <span class="material-symbols-outlined">chevron_right</span>
+            </button>
+
+            <div class="header">
+                <img src="{% static 'images/logo.svg'%}" class="logo" />
+            </div>
+
+
+
+            <div class="search">
+                <span class="material-symbols-outlined">search</span>
+                <input type="text" placeholder="Search" />
+            </div>
+            <nav class="menu">
+                <a href="http://127.0.0.1:8000/" style="text-decoration: none; color: inherit;">
+                    <button type="button" class="menu-item">
+                        <span class="material-symbols-outlined">home</span>
+                        <p class="menu-text">Home</p>
+                    </button>
+                </a>
+
+        </aside>
+</header>
+<script src="https://cdn.jsdelivr.net/npm/ukiyojs@4.2.0/dist/ukiyo.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+
+
+<!-- partial -->
+
+
+</html>
+
+
+</body>
+
+<footer>
+    <img class="ukiyo image-3" src="{% static 'images/55.jpg'%}" />
+    <div class="footer">
+        <div>
+            <h2>Projects</h2>
+            <ul>
+                <li>Todo app</li>
+                <li>Calculator</li>
+                <li>Instagram Clone</li>
+                <li>Parallax Website</li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+
+<script>
+    // Modal Image Gallery
+    function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+    }
+
+    // Change style of navbar on scroll
+    window.onscroll = function () { myFunction() };
+    function myFunction() {
+        var navbar = document.getElementById("myNavbar");
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+        } else {
+            navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+        }
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function toggleFunction() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+
+
+
+</html>
+
+<script>
+
+
+    const els = document.querySelectorAll(".ukiyo");
+    els.forEach((el) => {
+        const parallax = new Ukiyo(el);
+    });
+
+    // smooth scroll
+    const lenis = new Lenis();
+
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    const sidebar = document.querySelector(".sidebar");
+
+    const toggleOpen = () => sidebar.classList.toggle("open");
+
+    const nav = document.querySelector(".sidebar nav");
+
+    const buttons = document.querySelectorAll(".sidebar nav button");
+
+    buttons[0].classList.add("active");
+
+    buttons.forEach((button, index) =>
+        button.addEventListener("click", () => {
+            buttons.forEach((b) => b.classList.remove("active"));
+            button.classList.add("active");
+            nav.style.setProperty("--top", `${index === 0 ? 0 : index * 56}px`);
+        })
+    );
+</script>
+
+<style>
+    body {
+        color: #fff;
+        background-color: #010101;
+        font-family: "Euclid Circular A", "Poppins", sans-serif;
+        width: 100%;
+        margin: 0;
+
+    }
+
+    header {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .banner {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 0 15%;
+        background: linear-gradient(rgba(252, 249, 249, 0), rgb(0 0 0 / 100%) 75%);
+    }
+
+    footer {
+        position: relative;
+        display: flex;
+    }
+
+    .footer {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding: 100px 15% 0;
+        background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 100%) 80%);
+    }
+
+    ul {
+        margin: 40px 0 0;
+        padding-left: 20px;
+    }
+
+    ul li {
+        height: 40px;
+        opacity: 0.5;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 50px;
+        margin: 0;
+    }
+
+    h3 {
+        font-weight: 400;
+        font-size: 24px;
+        opacity: 0.5;
+        margin: 4px 0;
+    }
+
+    p {
+        margin: 10px 0 0;
+        opacity: 0.5;
+        line-height: 1.45;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    .row {
+        display: flex;
+        /* Use Flexbox for layout */
+        align-items: center;
+        /* Vertically center items */
+        justify-content: space-between;
+        /* Space between image and text */
+        gap: 40px;
+        /* Add spacing between image and text */
+        max-width: 1200px;
+        /* Limit the width of the container */
+        margin: 40px auto;
+        /* Center the container horizontally */
+        padding: 20px;
+        background-color: #000000;
+        /* White background for the section */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        /* Subtle shadow */
+        border-radius: 8px;
+        /* Rounded corners */
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .row {
+            flex-direction: column;
+            /* Stack image and text vertically on smaller screens */
+            text-align: center;
+            /* Center-align text */
+        }
+
+        .ukiyo.image-2 {
+            width: 10%;
+            /* Make the image full-width */
+            margin-bottom: 4px;
+            /* Add space below the image */
+        }
+
+        .about {
+            width: 20%;
+            /* Make the text full-width */
+        }
+    }
+
+    .about {
+        margin-top: -010px;
+        max-width: 20px;
+    }
+
+    .about h2 {
+        font-size: 50px;
+    }
+
+    .ukiyo {
+        margin-top: 200px;
+    }
+
+    .image-1 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        margin-top: 0 !important;
+    }
+
+    .image-2 {
+        margin-top: -100px !important;
+        height: 100% !important;
+        width: 100% !important;
+    }
+
+    .image-3 {
+        width: 100%;
+        height: 75vh;
+    }
+
+    /* تنظیم پیش‌فرض برای عکس و متن */
+    .row img.ukiyo.image-2 {
+        width: 50%;
+        /* عکس‌ها نصف عرض ردیف */
+        height: 20%;
+        object-fit: cover;
+        /* برای تنظیم اندازه عکس */
+    }
+
+    .row .about {
+        max-width: 500%;
+        /* متن نصف عرض ردیف */
+    }
+
+    /* تعیین جهت برای ردیف‌های زوج و فرد */
+    .row:nth-child(odd) {
+        flex-direction: row;
+        /* ردیف‌های فرد: عکس سمت چپ */
+    }
+
+    .row:nth-child(even) {
+        flex-direction: row-reverse;
+        /* ردیف‌های زوج: عکس سمت راست */
+    }
+</style>
+
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    .sidebar {
+        --width-open: 230px;
+        --width-closed: 64px;
+    }
+
+    .sidebar button {
+        background: transparent;
+        border: 0;
+        padding: 0;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+    .sidebar {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        bottom: 30px;
+        width: var(--width-closed);
+        border-radius: 16px;
+        background: #000000;
+        transition: width 0.4s;
+    }
+
+    .sidebar.open {
+        width: var(--width-open);
+    }
+
+    button.toggle {
+        position: absolute;
+        z-index: 2;
+        top: 24px;
+        right: -12px;
+        display: grid;
+        place-items: center;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #2f2b43;
+        color: #8f8d9b;
+        box-shadow: 0 0 10px rgb(0 0 0 / 10%);
+        transition: 0.3s;
+    }
+
+    .toggle:hover {
+        color: #f9f9f9;
+    }
+
+    .sidebar.open .toggle {
+        rotate: 180deg;
+    }
+
+    .sidebar .search {
+        position: relative;
+        padding: 16px 0;
+        margin: 0 10px 0;
+        width: calc(var(--width-closed) - 20px);
+        transition: 0.3s;
+    }
+
+    .sidebar.open .search {
+        width: calc(var(--width-open) - 20px);
+    }
+
+    .sidebar .search span {
+        position: absolute;
+        top: 26px;
+        left: 12px;
+        color: #68687a;
+    }
+
+    .sidebar .search input {
+        background: #2f2b43;
+        border: 0;
+        border-radius: 8px;
+        font-family: inherit;
+        width: 100%;
+        height: 44px;
+        font-size: 17px;
+        padding-left: 30px;
+        transition: 0.3s;
+    }
+
+    .sidebar .search input::placeholder {
+        color: rgb(255 255 255 / 0%);
+    }
+
+    .sidebar.open .search input::placeholder {
+        color: #68687a;
+    }
+
+    .sidebar.open .search input {
+        padding-left: 52px;
+    }
+
+    .sidebar .inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 260px;
+    }
+
+    .sidebar .header {
+        display: flex;
+        align-items: center;
+        height: 72px;
+        width: var(--width-closed);
+        padding: 0 20px;
+        background: rgb(0 0 0 / 15%);
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+        transition: 0.3s;
+    }
+
+    .sidebar.open .header {
+        width: var(--width-open);
+    }
+
+    .sidebar .header h1 {
+        margin-left: 12px;
+        font-weight: 500;
+        font-size: 16px;
+        letter-spacing: 2px;
+        color: #f9f9f9;
+    }
+
+    .sidebar .logo {
+        height: 28px;
+    }
+
+    .sidebar .menu {
+        position: relative;
+        display: grid;
+    }
+
+    .sidebar .menu::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 4px;
+        height: 56px;
+        width: 4px;
+        background: #656aff;
+        translate: 0 var(--top);
+        transition: 0.3s;
+    }
+
+    .sidebar .menu button {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        height: 56px;
+        width: var(--width-closed);
+        font-size: 17px;
+        text-transform: capitalize;
+        line-height: 1;
+        padding: 0 22px;
+        color: inherit;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: 0.3s;
+    }
+
+    .sidebar.open .menu button {
+        width: var(--width-open);
+    }
+
+    .sidebar .menu :is(button:hover, .active) {
+        color: rgb(255 255 255 / 100%);
+        opacity: 1;
+    }
+
+    .sidebar.open .menu .active {
+        cursor: default;
+    }
+
+    .sidebar .menu button:hover>span {
+        opacity: 1;
+    }
+
+    .sidebar .menu button p,
+    .sidebar .header h1 {
+        opacity: 0;
+    }
+
+    .sidebar.open :is(.sidebar .menu button p, .sidebar .header h1) {
+        opacity: 1;
+    }
+
+    .sidebar.open .logo {
+        scale: 1;
+    }
+
+    .sidebar .menu button>img {
+        width: 24px;
+        height: 24px;
+    }
+</style>
+
+
+<style>
+    /* General sidebar styling */
+
+
+    /* Menu item styling */
+    .menu-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        /* Space between icon and text */
+        padding: 10px 15px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        width: 100%;
+        text-align: left;
+    }
+
+    .menu-item:hover {
+        background-color: #666c96;
+        /* Lighter background on hover */
+        transform: translateX(5px);
+        /* Slight movement on hover */
+    }
+
+    /* Menu text styling */
+    .menu-text {
+        margin: 5;
+        font-size: 1rem;
+        opacity: 0;
+        /* Initially hidden */
+        transition: opacity 0.3s ease, color 0.3s ease;
+    }
+
+    .menu-item:hover .menu-text {
+        opacity: 1;
+        /* Show text on hover */
+        color: #f7f7f7;
+        /* Highlighted text color */
+    }
+
+    /* Icon styling */
+    .material-symbols-outlined {
+        font-size: 1.5rem;
+        color: #888;
+        transition: color 0.3s ease;
+    }
+
+    .menu-item:hover .material-symbols-outlined {
+        color: #f7f7f7;
+        /* Highlighted icon color */
+    }
+
+    /* Search bar styling */
+
+    .search input {
+        background: transparent;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 5px;
+        width: 100%;
+    }
+
+    /* Header styling */
+    .header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .header img {
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+    }
+
+    .header h1 {
+        margin: 0;
+        font-size: 1.5rem;
+        color: #f7f7f7;
+    }
+</style>
