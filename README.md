@@ -13,7 +13,10 @@ Selenium
 Telegram Bot API
 
 ## Projects
-
+### Websites 
+- App1
+- App2
+- App3
 ### Automation
 - **Instagram-Bots**: Automation scripts for Instagram using Selenium.
 - **Telegram-Bots**: Telegram bots for messaging and notifications.
