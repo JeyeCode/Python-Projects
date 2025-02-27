@@ -8,14 +8,7 @@ This repository showcases a variety of Python projects developed by JeyCode, fea
 - **Automation Scripts**: Enhance your productivity with bots for popular platforms.
 - **Web Scraping Tools**: Effortlessly extract data from e-commerce sites.
 - **Social Media Management Tools**: Streamline your social media presence.
-
-## Main Features
-
-### Automation
-- **Instagram Bots**: Automate tasks on Instagram using Selenium.
-- **Telegram Bots**: Create bots for messaging and notifications.
-- **Whatsapp Bots**: Create bots for messaging and notifications.
-
+## Projects Overview
 
 ### Web Scraping
 - **Product Scraper**: Efficiently scrape product data from various e-commerce websites.
@@ -28,7 +21,6 @@ This repository showcases a variety of Python projects developed by JeyCode, fea
 - **Selenium**
 - **Telegram Bot API**
 
-## Projects Overview
 
 ### Websites
 - **App1**
@@ -39,11 +31,7 @@ This repository showcases a variety of Python projects developed by JeyCode, fea
 - **Instagram-Bots**: Automation scripts for Instagram using Selenium.
 - **Telegram-Bots**: Telegram bots designed for messaging and notifications.
 
-### Web Scraping
-- **Product-Scraper**: A tool that scrapes product data from e-commerce websites.
 
-### Social Media Tools
-- **OutputMessenger**: A powerful tool for managing and automating social media postings.
 
 ## Getting Started
 
