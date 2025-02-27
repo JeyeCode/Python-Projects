@@ -14,6 +14,8 @@ This repository showcases a variety of Python projects developed by JeyCode, fea
 ### Automation
 - **Instagram Bots**: Automate tasks on Instagram using Selenium.
 - **Telegram Bots**: Create bots for messaging and notifications.
+- **Whatsapp Bots**: Create bots for messaging and notifications.
+
 
 ### Web Scraping
 - **Product Scraper**: Efficiently scrape product data from various e-commerce websites.
