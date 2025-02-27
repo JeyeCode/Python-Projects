@@ -1,7 +1,16 @@
 # Python-Projects
 "A collection of my Python projects including automation, web scraping, and social media tools." Written By JeyCode
 
+This repository contains a collection of Python projects created by JeyeCode, including automation scripts, web scraping tools, and social media management tools.
 
+Main Function Points
+Automation: Instagram bots and Telegram bots for various tasks
+Web Scraping: Product scraper to extract data from e-commerce websites
+Social Media Tools: A tool for managing and automating social media posts
+Technology Stack
+Python
+Selenium
+Telegram Bot API
 
 ## Projects
 
