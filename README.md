@@ -20,9 +20,17 @@ This repository showcases a variety of Python projects developed by JeyCode, fea
 - **Python**
 - **Selenium**
 - **Telegram Bot API**
+- **Panda**
+- **InstagramAPI**
+- **BOTfather**
+- **Python**
+- **Django Framework**
+- **Falsk Framework**
+- **Output Messenger**
 
 
-### Websites
+
+### Websites BackEnds And Font!
 - **App1**
 - **App2**
 - **App3**
@@ -30,6 +38,8 @@ This repository showcases a variety of Python projects developed by JeyCode, fea
 ### Automation
 - **Instagram-Bots**: Automation scripts for Instagram using Selenium.
 - **Telegram-Bots**: Telegram bots designed for messaging and notifications.
+- **WhatsApp-Bots**: Telegram bots designed for messaging and notifications.
+
 
 
 
