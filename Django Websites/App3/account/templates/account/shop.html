@@ -1,0 +1,748 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+
+<head>
+  <title>JeyCode</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <html lang='en' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b'
+    xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+  <head>
+    <meta content='width=device-width, initial-scale=1' name='viewport' />
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://demos.creative-tim.com/notus-js/assets/styles/tailwind.css">
+    <link rel="stylesheet"
+      href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=shopping_cart_checkout" />
+    <link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=login" />
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  </head>
+
+<body>
+
+
+
+  <form action='/search' id='searchbox' method='get'>
+    <input class='txc' id='input' name='q' placeholder='Search...' required='required' type='text' />
+    <input name='by-date' type='hidden' value='true' />
+    <input name='i' type='hidden' value='0' />
+    <button class='submit' type='submit' value=''></button>
+  </form>
+
+
+
+  <div class="wp_link txl" style="display: flex; justify-content: center; align-items: center;">
+    <a href="http://127.0.0.1:8000/">صفحه اصلی</a>
+    <a href="{% url 'shop' %}">فروشگاه</a>
+    <a href="{% url 'products' %}">پیگیری سفارش</a>
+    <a href="{% url 'products' %}"> محصولات</a>
+    <a href="http://127.0.0.1:8000/au/AU/"> درباره ما</a>
+
+ 
+
+    <span class="material-symbols-outlined">
+      <a href="{% url 'register' %}" class="cart-link">login</a>
+    
+  </div>
+  </div>
+
+  </div>
+
+  <div class="w3-container w3-content w3-padding-64 tour-content" style="max-width:1200px">
+
+
+  <p>
+    <div class="wp_link txl" style="display: flex; justify-content: center; align-items: center;">
+      <a href="" style="font-size: 40px;">محصولات</a> <!-- تغییر اندازه فونت -->
+    </span>
+      </a>
+    </div>
+ 
+  </p>
+<div>
+<p>
+  
+</p>
+</div> 
+ <ul class="accordion">
+    <li>
+      <img src="{% static 'images/1.jpg' %}" />
+      <div class="content">
+        <span>
+          <h2>Alexis Rios</h2>
+          <p>Frontend</p>
+          <button class="add-to-cart">خرید</button> <!-- دکمه اضافه شد -->
+
+        </span>
+      </div>
+    </li>
+    <li>
+      <img src="{% static 'images/2.jpg' %}" />
+      <div class="content">
+        <span>
+          <h2>Liam Scott</h2>
+          <p>Backend</p>
+          <button class="add-to-cart">خرید</button> <!-- دکمه اضافه شد -->
+
+        </span>
+      </div>
+    </li>
+    <li>
+      <img src="{% static 'images/3.jpg' %}" />
+      <div class="content">
+        <span>
+          <h2>Pavel Dvorak</h2>
+          <p>Backend</p>
+          <button class="add-to-cart">خرید</button> <!-- دکمه اضافه شد -->
+
+        </span>
+      </div>
+    </li>
+    <li>
+      <img src="{% static 'images/4.jpg' %}" />
+      <div class="content">
+        <span>
+          <h2>Kelly Cox</h2>
+          <p>Designer</p>
+          <button class="add-to-cart">خرید</button> <!-- دکمه اضافه شد -->
+
+        </span>
+      </div>
+    </li>
+    <li>
+      <img src="{% static 'images/5.jpg' %}" />
+      <div class="content">
+        <span>
+          <h2>Kelly Cox</h2>
+          <p>Designer</p>
+          <button class="add-to-cart">خرید</button> <!-- دکمه اضافه شد -->
+
+        </span>
+      </div>
+    </li>
+    <li>
+      <img src="{% static 'images/6.jpg' %}" />
+      <div class="content">
+        <span>
+          <h2>Kelly Cox</h2>
+          <p>Designer</p>
+          <button class="add-to-cart">خرید</button> <!-- دکمه اضافه شد -->
+
+        </span>
+      </div>
+    </li>
+  </ul>
+
+  </div>
+  </form>
+
+
+  <script>
+
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', function() {
+    const productName = this.closest('li').querySelector('h2').innerText;
+    const productRole = this.closest('li').querySelector('p').innerText;
+    alert(`به سبد خرید شما اضافه شد: ${productName} - ${productRole}`);
+    // در اینجا می‌توانید محصول را به سبد خرید اضافه کنید
+  });
+});
+  </script>
+  <style>
+
+.add-to-cart {
+  background-color: #4c90cf; /* رنگ پس‌زمینه */
+  color: #221f1f; /* رنگ متن */
+  border: none; /* حذف حاشیه */
+  padding: 10px 20px; /* فاصله داخلی */
+  border-radius: 5px; /* گوشه‌های گرد */
+  font-size: 16px; /* اندازه فونت */
+  cursor: pointer; /* تغییر شکل موس به اشاره‌گر */
+  transition: background-color 0.3s ease; /* افکت تغییر رنگ */
+  margin-top: 10px; /* فاصله از بالا */
+}
+
+.add-to-cart:hover {
+  background-color: #8b8b8b; /* تغییر رنگ هنگام hover */
+}
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+    }
+
+    .container {
+      padding: 75px 0;
+      margin: 0 auto;
+      width: 1140px;
+    }
+
+    h1 {
+      position: relative;
+      margin-bottom: 45px;
+      font-family: "Oswald", sans-serif;
+      font-size: 44px;
+      text-transform: uppercase;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    .gallery-wrap {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 70vh;
+    }
+
+    .item {
+      flex: 1;
+      height: 100%;
+      background-position: center;
+      background-size: cover;
+      background-repeat: none;
+      transition: flex 0.8s ease;
+      filter: blur(1px);
+      border-radius: 25px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .item:hover {
+      flex: 7;
+      filter: blur(0px);
+    }
+
+    .item-text {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      color: #fff;
+      font-family: "Oswald", sans-serif;
+      font-size: 100px;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      transform: translateY(20px);
+    }
+
+    .item:hover .item-text {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .item-1 {
+      background-image: url("static/images/1.jpg");
+    }
+
+    .item-2 {
+      background-image: url("static/images/6.jpg");
+    }
+
+    .item-3 {
+      background-image: url("static/images/3.jpg");
+    }
+
+    .item-4 {
+      background-image: url("static/images/4.jpg");
+    }
+
+    .item-5 {
+      background-image: url("static/images/5.jpg");
+    }
+
+    .social {
+      position: absolute;
+      right: 35px;
+      bottom: 0;
+    }
+
+    .social img {
+      display: block;
+      width: 32px;
+    }
+  </style>
+  </p>
+
+
+</body>
+<footer class="relative bg-blueGray-200 pt-8 pb-6">
+  <div class="container mx-auto px-4">
+    <div class="flex flex-wrap text-left lg:text-left">
+      <div class="w-full lg:w-6/12 px-4">
+
+        <div class="mt-6 lg:mb-0 mb-6">
+          <button
+            class="bg-white text-lightBlue-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fab fa-twitter"></i></button><button
+            class="bg-white text-lightBlue-600 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fab fa-facebook-square"></i></button><button
+            class="bg-white text-pink-400 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fab fa-dribbble"></i></button><button
+            class="bg-white text-blueGray-800 shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+            type="button">
+            <i class="fab fa-github"></i>
+          </button>
+        </div>
+      </div>
+      <div class="w-full lg:w-6/12 px-4">
+        <div class="flex flex-wrap items-top mb-6">
+          <div class="w-full lg:w-4/12 px-4 ml-auto">
+            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful Links</span>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                  href="https://www.creative-tim.com/presentation?ref=njs-profile">About Us</a>
+              </li>
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                  href="https://blog.creative-tim.com?ref=njs-profile">Blog</a>
+              </li>
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                  href="https://www.github.com/creativetimofficial?ref=njs-profile">Github</a>
+              </li>
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                  href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Free Products</a>
+              </li>
+            </ul>
+          </div>
+          <div class="w-full lg:w-4/12 px-4">
+            <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other Resources</span>
+            <ul class="list-unstyled">
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                  href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT
+                  License</a>
+              </li>
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                  href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
+              </li>
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                  href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+              </li>
+              <li>
+                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                  href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="my-6 border-blueGray-300">
+    <div class="flex flex-wrap items-center md:justify-between justify-center">
+      <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+        <div class="text-sm text-blueGray-500 font-semibold py-1">
+          Copyright © <span id="get-current-year">2025</span><a 
+            class="text-blueGray-500 hover:text-gray-800" target="_blank">JeyCode
+            <a
+              class="text-blueGray-500 hover:text-gray-800">Django</a>
+        </div>
+        <div class="text-sm text-blueGray-500 font-semibold py-1">
+          <a href="http://127.0.0.1:8000/"
+          class="text-blueGray-500 hover:text-blueGray-800">Home</a>
+
+    </div>
+  </div>
+</footer>
+
+
+
+
+<style>
+  .cart-link {
+    position: absolute;
+    /* قرار دادن لینک در موقعیت مطلق */
+    left: 0;
+    /* قرار دادن لینک در سمت چپ */
+    margin-left: 90px;
+    /* فاصله از لبه چپ */
+    margin-top: -13px;
+    /* فاصله از لبه چپ */
+
+
+    /* تنظیمات رنگ */
+    background-color: #ffffff;
+    /* رنگ پس‌زمینه */
+    color: #fff;
+    /* رنگ متن */
+    text-decoration: none;
+    /* حذف زیرخط متن */
+
+    /* تنظیمات استایل */
+    border-radius: 5px;
+    /* گوشه‌های گرد */
+    font-size:10px;
+    /* اندازه فونت */
+    font-weight: bold;
+    /* ضخامت فونت */
+    display: inline-block;
+    /* نمایش به صورت inline-block */
+
+    /* افکت‌ها */
+    transition: all 0.3s ease;
+    /* افکت انتقال نرم */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* سایه */
+  }
+
+  /* افکت هنگام hover (وقتی موس روی لینک است) */
+  .cart-link:hover {
+    background-color: #0056b3;
+    /* تغییر رنگ پس‌زمینه */
+    transform: translateY(-8px);
+    /* حرکت به بالا */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    /* افزایش سایه */
+  }
+
+  /* افکت هنگام کلیک (فعال) */
+  .cart-link:active {
+    transform: translateY(0);
+    /* بازگشت به موقعیت اولیه */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    /* کاهش سایه */
+  }
+
+  #searchbox {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .accordion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    gap: 16px;
+    transition: 0.3s;
+    margin-left: 20px; /* فاصله بین .wp_link و .accordion */
+    margin-top: 50px; /* فاصله بین .wp_link و .accordion */
+
+
+  }
+
+  .accordion:hover {
+    gap: 5;
+  }
+
+  .accordion li {
+    position: relative;
+    overflow: hidden;
+    flex: 0 0 80px;
+    border-radius: 50px;
+    opacity: 0.75;
+    cursor: pointer;
+  }
+
+  .accordion li img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 200%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.5);
+  }
+
+  .accordion li,
+  .accordion li img,
+  .accordion li .content,
+  .accordion li .content span {
+    transition: 0.3s;
+  }
+
+  .accordion h2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 45px;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 10px;
+    white-space: nowrap;
+  }
+
+  .accordion li .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    color: #fff;
+    padding: 15px;
+    background: #02022e;
+    background: linear-gradient(0deg,
+        rgb(0 0 0 / 70%) 10%,
+        rgb(255 255 255 / 0%) 100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .accordion li .content span {
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    bottom: 50px;
+    translate: -50%;
+    scale: 0.85;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  .accordion li:hover {
+    flex: 0 1 260px;
+    scale: 1.1;
+    z-index: 10;
+    opacity: 1;
+  }
+
+  .accordion li:hover .content {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .accordion li:hover span {
+    scale: 1;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  body {
+    font-family: "Lato", sans-serif;
+    font-size: 13px;
+    text-align: center;
+    background: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+
+  .custom-button {
+    text-decoration: none;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    width: 10%;
+    text-align: center;
+  }
+
+  .logo-image {
+    width: 24px;
+    height: auto;
+  }
+
+  .d-flex {
+    display: flex;
+  }
+
+  .align-items-center {
+    align-items: center;
+  }
+
+  .mr-3 {
+    margin-right: 8px;
+  }
+
+  .wp_link {
+    color: #704a88;
+    margin: 3px 0 0;
+    background: #f1f1ff;
+    padding: 3px 3px;
+    border-bottom-left-radius: 26px;
+    box-shadow: 0 1px 4px rgb(77, 75, 75);
+  }
+
+  .wp_link a {
+    color: #302c2c;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 120%;
+    padding: 4px 12px;
+    text-decoration: none;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+  }
+
+  .wp_link a:hover {
+    background: #e7ddff;
+  }
+
+  #input {
+    width: 100%;
+    height: 33px;
+    font-size: 11px;
+    padding: 1px 0;
+    outline: 0;
+    background: #fff;
+    border-top-right-radius: 26px;
+    border: 2px solid #e8f3ff;
+    box-sizing: border-box;
+  }
+
+  #searchbox form {
+    width: 80%;
+    display: inline-block;
+  }
+
+  #searchbox button {
+    padding: 17px;
+    border: 0;
+    background: 0;
+    outline: 0;
+    background-image: url(//img.uhdpaper.com/asset/search.svg?dl);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    margin-left: -42px;
+    transform: rotate(-9deg);
+  }
+
+  #searchbox button:hover {
+    cursor: pointer;
+  }
+
+  .waterfall-button {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #fff;
+    background: linear-gradient(90deg, #fff7f7, #ffffff);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    transition: transform 0.1s ease;
+  }
+
+  .waterfall-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(236, 215, 215, 0.4), transparent);
+    transition: left 0.8s ease;
+  }
+
+  .waterfall-button:hover::before {
+    left: 100%;
+  }
+
+  .waterfall-button:active {
+    transform: scale(0.95);
+  }
+
+  .login-icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #333;
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+
+  .login-icon:hover {
+    color: #007bff;
+    transform: scale(1.1);
+  }
+
+  .login-icon i {
+    transition: transform 0.3s ease;
+  }
+
+  .login-icon:hover i {
+    transform: translateX(5px);
+  }
+
+  /* Add CSS styles for flex container and items */
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allow items to wrap to the next row if necessary */
+    justify-content: space-between;
+    /* Space items evenly along the main axis */
+    list-style: none;
+    /* Remove list styles */
+    padding: 0;
+  }
+
+  .product-item {
+    flex: 1;
+    /* Grow to fill available space evenly */
+    max-width: 30%;
+    /* Limit item width to avoid overcrowding */
+    margin: 10px;
+    /* Add spacing between items */
+    border: 1px solid #ccc;
+    /* Add a border for visual separation */
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Style the "Buy Now" button */
+  .buy-now-button {
+    display: block;
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+</style>
+
+
+
+
+
+<script>
+
+
+  // Function to dynamically change the button's background color
+  function changeButtonColor() {
+    const button = document.querySelector('.waterfall-button');
+    let hue = 0;
+
+    setInterval(() => {
+      hue = (hue + 1) % 360; // Increment hue for a smooth color transition
+      button.style.background = `linear-gradient(90deg, hsl(${hue}, 100%, 50%), hsl(${(hue + 30) % 360}, 100%, 50%))`;
+    }, 50); // Adjust the interval for faster/slower color change
+  }
+
+  // Call the function to start the color change
+  changeButtonColor();
+
+</script>
+
+</html>
